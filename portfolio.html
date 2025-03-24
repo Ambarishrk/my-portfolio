@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ambarish R.K</title>
+    <link rel="stylesheet" href="portstyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h1>About Me</h1>
+                    <p>Hello! I am <strong>Ambarish R.K</strong>, a passionate Artificial Intelligence and Data Science student pursuing my B.Tech at Muthayammal Engineering College, Rasipuram. With a strong foundation in C, Java, Python, and HTML, I am enthusiastic about leveraging technology to build intelligent and efficient solutions.
+
+                        I have two years of experience in webpage creation, and I enjoy working on projects that combine web development with AI-driven solutions. My interests include machine learning, data analytics, and Web3 technologies, and I am always eager to explore innovative applications in these fields.
+                        
+                        I actively participate in hackathons and coding challenges, recently competing in HackIndia, where my team, Tech Mafia, developed an AI-based project. I am always open to learning new technologies and collaborating on impactful projects that push the boundaries of AI and web development</p>
+                </div>
+                <div class="about-image">
+                    <img src="rka.jpg" alt="Ambarish R.K">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h1>Skills</h1>
+            <ul>
+                <li>C Programming</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML & Web Development</li>
+            </ul>
+        </section>
+
+        <section id="education" class="section">
+            <h1>Education</h1>
+            <p><strong>Schooling:</strong> Studied 1st to 12th at <br> <em>Kamarajar Matriculation Higher Secondary School,Namakkal</em></p>
+            <p><strong>College:</strong> Pursuing <em>B.Tech in Artificial Intelligence and Data Science</em> at <br> <em>Muthayammal Engineering College, Rasipuram, Namakkal.</em></p>
+        </section>
+
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <div class="project">
+                <h2>To-Do List Web App</h2>
+                <p>A simple and efficient task manager to help users organize daily tasks. It allows adding, deleting, and marking tasks as completed.</p>
+            </div>
+            <div class="project">
+                <h2>HackIndia Project - Web3 & AI Integration</h2>
+                <p>Developed during HackIndia, this project combines Web3 and AI technologies to create an innovative decentralized application. Our team, <strong>Tech Mafia</strong>, focused on improving security and user authentication using blockchain and machine learning.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h1>Contact</h1>
+            <p>Email: <a href="mailto:example@example.com">ambarishrk2006@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">https://linkedin.com/in/ambarish-r-k-8012732a6</a></p>
+
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Description:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
